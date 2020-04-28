@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: leonidchetverikovmeetup 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: leonidchetverikovmeetup 
+    spec:
+      containers:
+        - name: leonidchetverikovmeetup 
+          image: meetup.azurecr.io/leonidchetverikovmeetup
+          ports:
+          - containerPort: 80
